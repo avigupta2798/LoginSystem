@@ -23,6 +23,7 @@ from Login import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('user_profile/', views.user_login, name='Profile'),
     path('Login/', include('Login.urls')),
     path('logout/', views.user_logout, name='logout'),
 ]

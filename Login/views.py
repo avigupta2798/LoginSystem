@@ -60,3 +60,10 @@ def user_login(request):
             return HttpResponse("Invalid login details given")
     else:
         return render(request, 'Login/login.html', {})
+
+def user_profile(request):
+    username = None
+    if request.user.is_authenticated:
+        username = request.user.username
+    user = UserProfileInfo.objects.get(user__username=username)
+    return render(request, 'Login/user_profile.html', {"user":user})
