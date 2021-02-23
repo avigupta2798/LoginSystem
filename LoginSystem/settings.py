@@ -25,7 +25,7 @@ SECRET_KEY = '1$gdq(ng%%%nkbg1szb!#gr)8a7owny8k15e0y&r$@%@ioo%8$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['djangologinsystem.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','https://djangologinsystem.herokuapp.com/']
 
 
 # Application definition
@@ -125,4 +125,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' 
