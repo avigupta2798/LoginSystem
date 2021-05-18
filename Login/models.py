@@ -10,9 +10,13 @@ class UserProfileInfo(models.Model):
     name = models.CharField(max_length=100)
     phone = models.CharField(max_length=13)
     email = models.EmailField(max_length=100, null=True, blank=True)
+    file = models.FileField(null=True, blank=True)
     
     def __user__(self):
         return "%s" % self.user.username
     
     def __str__(self):
         return "%s" % self.name
+        
+    def __str__(self):
+        return "%s" % self.file.name

@@ -4,6 +4,7 @@ from Login.forms import UserForm,UserProfileInfoForm
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
+from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.decorators import login_required
 from Login.models import UserProfileInfo
 
@@ -24,8 +25,10 @@ def register(request):
     if request.method == 'POST':
         user_form = UserForm(data=request.POST)
         profile_form = UserProfileInfoForm(data=request.POST)
+        
         if user_form.is_valid() and profile_form.is_valid():
             user = user_form.save()
+            fss = FileSystemStorage()
             user.set_password(user.password)
             user.save()
             profile = profile_form.save(commit=False)
