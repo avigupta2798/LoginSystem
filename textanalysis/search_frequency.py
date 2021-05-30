@@ -10,7 +10,6 @@ def start(url):
 	for each_text in soup.findAll():
 		content = each_text.text
 		words = content.lower().split() 
-		import pdb;pdb.set_trace()
 		for each_word in words:
 			wordlist.append(each_word) 
 

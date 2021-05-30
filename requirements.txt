@@ -10,3 +10,4 @@ whitenoise==5.2.0
 djangorestframework 
 pymysql
 pandas
+beautifulsoup4
