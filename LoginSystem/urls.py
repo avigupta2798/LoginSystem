@@ -18,12 +18,14 @@ from django.urls import path, include
 from django.conf.urls import url, include
 from django.views.generic.base import TemplateView
 from Login.urls import *
+from textanalysis.views import getSearchResults
 from Login import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('user_profile/', views.user_login, name='Profile'),
     path('Login/', include('Login.urls')),
+    path('Analysis/', include('textanalysis.urls')),
     path('logout/', views.user_logout, name='logout'),
+    path('searchResults/', getSearchResults, name='getSearchResults'),
 ]

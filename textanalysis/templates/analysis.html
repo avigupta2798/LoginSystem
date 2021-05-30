@@ -1,0 +1,17 @@
+{% extends "Login/base.html" %}
+{% block body_block %}
+<div class="container" style="overflow: hidden;">
+  <div class="jumbotron" style="overflow: hidden;">
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong>Your text has been analyzed!</strong> Check the results below!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div class="container" style="overflow: hidden;">
+          <h1>Your Analyzed Text - {{ purpose }}</h1>
+          <p>
+        <pre>{{ analyzed_text}}</pre>
+          </p>
+      </div>
+  </div>
+</div>
+{% endblock %}

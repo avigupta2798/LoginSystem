@@ -25,7 +25,6 @@ SECRET_KEY = '1$gdq(ng%%%nkbg1szb!#gr)8a7owny8k15e0y&r$@%@ioo%8$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = ['https://djangologinsystem.herokuapp.com/','127.0.0.1']
 
 
@@ -41,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'Login',
+    'textanalysis',
 ]
 
 MIDDLEWARE = [

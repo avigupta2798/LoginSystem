@@ -1,0 +1,36 @@
+{% extends "Login/base.html" %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Text Analysis of a Page</h1><h2>Through input of an URL </h2><br><br>
+    <div class="ui-widget">
+        <h2>Enter the URL of any Page</h2>
+        <form action= "/searchResults" method= "GET">
+          <input id="search" type="text" placeholder="URL" name="term" size="100">
+            
+            <div class="form-check form-switch">
+              <input name="removepunc" class="form-check-input" type="checkbox" id="removepunc">
+              <label class="form-check-label" for="removepunc">Remove Punctuation</label>
+            </div>
+            <div class="form-check form-switch">
+              <input name="fullcapitalize" class="form-check-input" type="checkbox" id="fullcapitalize">
+              <label class="form-check-label" for="fullcapitalize">Convert to Uppercase</label>
+            </div>
+            <div class="form-check form-switch">
+              <input name="newlineremove" class="form-check-input" type="checkbox" id="newlineremove">
+              <label class="form-check-label" for="newlineremove">Remove new line</label>
+            </div>
+            <div class="form-check form-switch">
+              <input name="spaceremove" class="form-check-input" type="checkbox" id="spaceremove">
+              <label class="form-check-label" for="spaceremove">Remove spaces</label>
+            </div>
+            <div class="form-check form-switch">
+              <input name="charcount" class="form-check-input" type="checkbox" id="charcount">
+              <label class="form-check-label" for="charcount">Count the characters</label>
+            </div><br>
+            <button type="submit" class="btn btn-primary">Analyze Text</button>
+          </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
